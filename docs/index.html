@@ -11,7 +11,7 @@
     font-family: 'Open Sans', sans-serif;
     color: #121212;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h3 {
     font-family: 'Source Sans Pro', sans-serif;
   }
   table, th {
@@ -34,24 +34,24 @@
 
 <div>
 
-<h4 align="middle">Summary</h4>
+<h3 align="middle">Abstract</h3>
 <p>
-  So far, we have done two main parts: the first part was refactoring the code to include information about wavelengths, and the second part was actually creating an iridescent material, which will be shown later.
-  In the first part, we had to include wavelengths in our calculations because the main point of iridescence is that we need to rely on spectral light. In order to implement this, we need to sample wavelenths of Red,
-  Green and Blue values (which we modelled as a normal distribution). For every sample, we used three separate normal distributions to represent the red green and blue lights, which we then modelled from normal distributions. 
-  We then got a sample from each distribution to model the specific wavelength for that sample. We then had to refactor all the code from projects 3-1 and 3-2 in order to account for the passing of these wavelengths to different functions. 
-
-</p>
-<p>
-  The next step was to create a material with a thin film that would help us create the iridescent effect. We started out with the microfacet material code as a base here. The microfacet material relies on using the Fresnel term as part of the equation to determine the 
-  microfacet BSDF. In order to account for the thin film, we had to also edit the Fresnel term. This involved calculated the Fresnel term seperately for all of the 3 wavelengths (R, G, B corresponding) that we passed in. The first step was calculating the angles which 
-  the ray entered and left the thin film, and to do so, we calculated the refraction twice using the appropriate index of refraction in terms of the wavelength and the material. We then used the angles and the index of refraction of the air, the thin film, and the actual object. Using these 
-  values, we are able to calculate the reflection and transmission between the thin film and the material. We then accounted for phase changes, which had to take into the thickness of the material and the wavelength of the ray hitting the material.
-  Using these values from the previous equations, we are able to calculate the value of the transmission. Using the transmission, we can find out the reflectance using the conservation of energy. Applying this to the red, green, and blue wavelengths passed in results in the iridescent effect.
 </p>
 
-<h4 align="middle">Results</h4>
-<p>Using the technique above, we were able to get the images below by varying the base material for the microfacet material, the thickness of the thin film, and the index of refraction of the thing film.</p>
+<h3 align="middle">Technical Approach</h3>
+<h4 align="middle">Refactoring Code</h4>
+<p></p>
+<h4 align="middle">Iridescence - Thin Film</h4>
+<h4 align="left">Overview</h4>
+<h4 align="left">Reflected and Transmitted Amplitude</h4>
+<h4 align="left">Fresnel Term</h4>
+<h4 align="left">Thickness</h4>
+<h4 align="left">Complications with Soap Bubbles</h4>
+<h4 align="middle">Black Body Radiation</h4>
+
+
+<h3 align="middle">Results</h3>
+<p></p>
 <div center>
 <table style="width=100%">
     <tr>
@@ -75,17 +75,16 @@
 </div>
 
 
-
-
-<h4 align="middle">Original Plan</h4>
-<p>Although we have made siginificant progress on the project thus far, we have not stuck strictly to our original plan. As specified in the plan, we spent week 1 trying to gain better understanding of our project and refactoring our code. Unfortunately, we ran into significant problems during this portion. For exammple, we had a misunderstanding of how to account for the red, green, and blue wavelengths for each sample. This meant we had large errors before we started the project. As a result, our week 1 part took significantly longer than anticipated, eating into our week 2 work.</p>
-<p>Once we completed the week 2 work, we further strayed from the plan. We were more eager to see the results of an iridescent microfacet material than to see how the current material accounted for a wavelength dependent BSDF. For this reason, we decided to skip ahead to implementing the iridescent materials and postpone working on the wavelength dependent BSDF functions. We were able to implement a fairly successful version of the iridescent microfacet material, resulting in the iridescent dragon and bunnies shown above. We had to try various methods before settling on the one that resulted in the above images. This also involved spending time gaining a better understanding of the role index of refraction of the material and the thickness of the thin film cause in the material.</p>
-
-<h4 align="middle">Updated Plan</h4>
-<p>We anticipate that we will still be able to implement most of our original plan despite these delays, but the order in which we plan on attempting these features has shifted slightly. We have already begun researching how we will utilize PerlinNoise in our iridescent microfacet material, which is one of the extras we had planned to implement in week 4. Our next step is to implement a soap bubble material by adding a thin film effect to a glass material. We will then implement wavelength-dependent BSDFs to some of the existing materials. We will then spend whatever time we have left working on some of the extras outlined in our project proposal.</p>
-<h4 align="middle">Links</h4>
+<h3 align="middle">References</h3>
 <li><a href = "https://docs.google.com/presentation/d/1XYcI0anXJr93A3EHZn4cbVlb65MhMKVvi26xPkWUG90/edit?usp=sharing">Slides</a></li>
 <li><a href = "https://drive.google.com/file/d/1MXHjF4cffuJSG5EWnjKBR8b8CPMIxIwb/view">Video</a></li>
+
+
+<h3 align="middle">Contributions</h3>
+<p>Sydnie Shea Cohen - </p>
+<p>Ada Hu -</p>
+<p>Eugene Lee -</p>
+<p>Daniel Tseng - </p>
 
 </body>
 </html>
