@@ -32,6 +32,18 @@
   margin-right: auto;
   width: 100%;
 }
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 </style><!--
 <title>CS 184 Mesh Editor</title>
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -311,21 +323,28 @@
 
 
 <h3 align="middle">References</h3>
-<ul>
+
+<div class="row">
+  <div class="column">
   <li><a href = "https://cs184.eecs.berkeley.edu/su20/lecture/17-8/color">Lecture Notes on Color</a></li>
   <li><a href = "https://www-users.cs.umn.edu/~gmeyer/papers/gondek-meyer-siggraph-1994.pdf">Wavelength Dependent Reflection Functions</a></li>
   <li><a href = "http://www.dgp.toronto.edu/~nmorris/CSC2530/Project/morris.pdf" >Reflectance Model of Soap Bubbles</a></li>
   <li><a href = "https://kwsong.github.io/cs184_final/final.html?fbclid=IwAR3U7PPWtlaK6opWgSM0fu-bwZeC5XR1CmKtOcCZqHuWqWPhYejnbh0qUSg" >Rendering Iridescence (Previous Project)</a></li>
   <li><a href = "https://ceciliavision.github.io/graphics/a6/?fbclid=IwAR2joUWNobrNQcqD5PhCcKaDjl84ui83VRlZsD8_HYFHuxTLv_KeWTpSojc#" >Spectral Ray Tracing (Previous Project)</a></li>
   <li><a href = "https://solarianprogrammer.com/2012/07/18/perlin-noise-cpp-11/">Perlin Noise</a></li>
-  <li><a href = "https://hal.archives-ouvertes.fr/hal-01518344/document">A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence</a></li>
+ 
+  </div>
+  <div class="column">
+    <li><a href = "https://hal.archives-ouvertes.fr/hal-01518344/document">A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence</a></li>
   <li><a href = "https://dl-acm-org.libproxy.berkeley.edu/doi/10.1145/1122501.1122506">Rendering Biological Iridescences with RGB-based renderers</a></li>
   <li><a href = "https://refractiveindex.info/">List of Refractive Indexes</a></li>
   <li><a href = "https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-00-09-Soap-Bubbles-1-Sept00.pdf">Soap Bubbles Part 1</a></li>
   <li><a href = "https://www.glassner.com/wp-content/uploads/2014/04/CG-CGA-PDF-00-11-Soap-Bubbles-2-Nov00.pdf">Soap Bubbles Part 2</a></li>
   <li><a href = "http://graphics.stanford.edu/courses/cs348b-competition/cs348b-18/second_report.pdf">Soap Bubble Clusters</a></li>
 
-</ul>
+  </div>
+</div>
+
 
 <li><a href = "https://drive.google.com/file/d/1oJ5v6OR6bsPJWHD1JjnBD5NtkNlvQOyD/view">Video</a></li>
 
