@@ -169,23 +169,23 @@
 </div>
 <!-- <p>These formulas account for how entering from one material to another changes the amplitude of the wave. We can combine these formulas to figure out the amplitude of the Transmited wave. From the part of the wave that hits the thin film and reflects, we need to include one t0|1 * r1|0. We then need to account for the bounces within the thin film. This can be extended to account for multiple bounces, but using one bounce is sufficient to render iridescent objects. For this portion, we include r1|2 * t1|2. Thus the final amplitude A is t0|1*t1|2*r1|0*r1|2.</p> -->
 <h4 align="left">Phase Changes</h4>
-<p>The next step is to account for the phase change of the waves. which determines how the waves interact with each other.
-  Waves can act in a constructive way, which will reinforce and strengthen the wave,
-  a destructive wave, which occurs when both waves completely cancel each other, or some combination of the two.
-  Using phase changes, we can represent how the waves will interact with one another by use the formula below with k set to 1, since we are only accounting for 1 bounce within the thin film.
-  The lowercase delta refers to the scaled thickness of the thin film (see the section on thickness below).
-  Finally, we had to calculate the sum of the phase changes that occur from going from one material to another,
-  which is represented in the formula by the upercase delta.
-  When going into a material with a higher index of refraction, we use PI as the phase change. Otherwise, we use zero.</p>
-<div center>
-<table style="width=100%">
-    <tr>
-        <td align="middle">
-            <img src="images/phasef.png" height="50px" />
-        </td>
-    </tr>
-</table>
+<div>
+  <div>
+    <img src="images/phasef.png" height="50px" />
+  </div>
+  <div>
+    <p>The next step is to account for the phase change of the waves. which determines how the waves interact with each other.
+      Waves can act in a constructive way, which will reinforce and strengthen the wave,
+      a destructive wave, which occurs when both waves completely cancel each other, or some combination of the two.
+      Using phase changes, we can represent how the waves will interact with one another by use the formula below with k set to 1, since we are only accounting for 1 bounce within the thin film.
+      The lowercase delta refers to the scaled thickness of the thin film (see the section on thickness below).
+      Finally, we had to calculate the sum of the phase changes that occur from going from one material to another,
+      which is represented in the formula by the upercase delta.
+      When going into a material with a higher index of refraction, we use PI as the phase change. Otherwise, we use zero.</p>
+ </div>
 </div>
+
+</aside>
 <h4 align="left">Fresnel Term</h4>
 <div>
   <div>
@@ -246,20 +246,19 @@
    and familiarizing ourselves with an entirely new code base.
    Weighing our options with little time remaining, we decided to instead focus on implementing Black Body Radiation.</p>
 <h4 align="middle">Black Body Radiation</h4>
-<p>Black Body Radiation is a method to render scenes that encorporate the temperature of the light being used.
-  By taking into account the energy emitted by a certain temperature of light when determining the intensity,
-  we can demonstrate the effects of warm verse cool lighting. We used the formula below,
-  and calculated the value for each of the red, green, and blue wavelengths for a specified temperature T.
-  In the formula, c is the speed of light, h is PLanck's constant, and k is Boltzman's constant.
-  Finally, we used the wavelengths and Wein's constant to find the Temperatre used to normalize each of the values.</p>
-<div center>
-<table style="width=100%">
-    <tr>
-        <td align="middle">
-            <img src="images/blackbodyf.png" height="50px" />
-        </td>
-    </tr>
-</table>
+
+<div>
+  <div>
+    <img src="images/blackbodyf.png" height="50px" />
+  </div>
+  <div>
+    <p>Black Body Radiation is a method to render scenes that encorporate the temperature of the light being used.
+      By taking into account the energy emitted by a certain temperature of light when determining the intensity,
+      we can demonstrate the effects of warm verse cool lighting. We used the formula below,
+      and calculated the value for each of the red, green, and blue wavelengths for a specified temperature T.
+      In the formula, c is the speed of light, h is PLanck's constant, and k is Boltzman's constant.
+      Finally, we used the wavelengths and Wein's constant to find the Temperatre used to normalize each of the values.</p>
+ </div>
 </div>
 <h4 align="middle">Problems</h4>
 <p>Our main issue came in tyring to implement soap bubbles, detailed in a previous section.
@@ -319,7 +318,7 @@
   <h4 align="middle">Iridescent Results</h4>
 <p>Below we show the result of rendering various iridescent objects with differing wavelengths.</p>
 <table style="width=100%">
-  
+
     <tr>
         <td align="middle">
             <img src="images/dragon250.png" height="250px" />
@@ -361,7 +360,7 @@
   <li><a href = "https://kwsong.github.io/cs184_final/final.html?fbclid=IwAR3U7PPWtlaK6opWgSM0fu-bwZeC5XR1CmKtOcCZqHuWqWPhYejnbh0qUSg" >Rendering Iridescence (Previous Project)</a></li>
   <li><a href = "https://ceciliavision.github.io/graphics/a6/?fbclid=IwAR2joUWNobrNQcqD5PhCcKaDjl84ui83VRlZsD8_HYFHuxTLv_KeWTpSojc#" >Spectral Ray Tracing (Previous Project)</a></li>
   <li><a href = "https://solarianprogrammer.com/2012/07/18/perlin-noise-cpp-11/">Perlin Noise</a></li>
- 
+
   </div>
   <div class="column">
     <li><a href = "https://hal.archives-ouvertes.fr/hal-01518344/document">A Practical Extension to Microfacet Theory for the Modeling of Varying Iridescence</a></li>
